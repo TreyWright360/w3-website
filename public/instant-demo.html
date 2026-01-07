@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant AI Demo Generator</title>
+    <!-- Vapi Web SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@vapi-ai/web/dist/vapi.min.js"></script>
+    <!-- Tailwind CSS (for instant styling) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(to right, #4f46e5, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #4f46e5;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
+        .pulse-ring {
+            box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.7);
+            animation: pulse-ring 2s infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(79, 70, 229, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(79, 70, 229, 0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center font-sans">
+
+    <div class="container mx-auto px-4 max-w-2xl">
+        
+        <!-- Header -->
+        <div class="text-center mb-10">
+            <span class="bg-indigo-900 text-indigo-200 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Free Demo</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mt-4 mb-2">Turn Your Website into a <br><span class="gradient-text">Voice AI Agent</span></h1>
+            <p class="text-gray-400 text-lg">Enter your URL below. We'll clone your business into a talking AI receptionist in 30 seconds.</p>
+        </div>
+
+        <!-- GENERATOR FORM -->
+        <div id="generator-card" class="bg-gray-800 rounded-2xl p-8 border border-gray-700 shadow-2xl">
+            <form id="demo-form" class="space-y-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-400 mb-2">Website URL</label>
+                    <input type="url" id="website-url" required placeholder="https://yourbusiness.com" 
+                        class="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-400 mb-2">Your Email (to send the link)</label>
+                    <input type="email" id="email" required placeholder="you@example.com" 
+                        class="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors">
+                </div>
+                
+                <button type="submit" id="submit-btn" 
+                    class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 rounded-lg transition-all transform hover:scale-[1.02] shadow-lg flex justify-center items-center">
+                    <span>Create My AI Agent</span>
+                </button>
+            </form>
+
+            <!-- Loading State -->
+            <div id="loading-state" class="hidden text-center py-6">
+                <div class="flex justify-center mb-4">
+                    <div class="loader"></div>
+                </div>
+                <p class="text-indigo-400 font-medium animate-pulse" id="loading-text">Analyzing your website...</p>
+                <div class="w-full bg-gray-700 h-2 rounded-full mt-4 overflow-hidden">
+                    <div class="bg-indigo-500 h-2 rounded-full w-1/3 animate-[width_3s_ease-in-out_infinite]" style="animation: loadprogress 4s ease-in-out infinite;"></div>
+                </div>
+                <style>@keyframes loadprogress { 0% { width: 10%; } 50% { width: 70%; } 100% { width: 100%; } }</style>
+            </div>
+        </div>
+
+        <!-- LIVE DEMO INTERFACE (Hidden initially) -->
+        <div id="demo-interface" class="hidden bg-gray-800 rounded-2xl p-8 border border-indigo-500/50 shadow-[0_0_50px_rgba(79,70,229,0.3)] text-center relative overflow-hidden">
+            <!-- Background Decoration -->
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500"></div>
+            
+            <h2 class="text-2xl font-bold mb-2">Your Agent is Ready!</h2>
+            <p class="text-gray-400 mb-8">It has learned your business hours, services, and pricing.</p>
+
+            <div class="flex justify-center mb-8 relative">
+                <button id="start-call-btn" onclick="toggleCall()" 
+                    class="bg-indigo-600 w-24 h-24 rounded-full flex items-center justify-center hover:bg-indigo-500 transition-all shadow-lg z-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                    </svg>
+                </button>
+                <!-- Pulse Effect Ring -->
+                <div id="pulse-effect" class="absolute top-0 left-0 right-0 bottom-0 m-auto w-24 h-24 rounded-full bg-indigo-500/30 hidden"></div>
+            </div>
+
+            <p id="call-status" class="text-indigo-300 font-mono text-sm mb-6">Click microphone to start</p>
+
+            <div class="border-t border-gray-700 pt-6 mt-6">
+                <p class="text-sm text-gray-500 mb-4">This demo expires in <span class="text-white font-bold">24 hours</span>.</p>
+                <a href="#" class="inline-block bg-white text-gray-900 font-bold py-2 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+                    Claim This Agent Forever
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // CONFIGURATION
+        const N8N_WEBHOOK_URL = 'YOUR_N8N_WEBHOOK_URL_HERE'; // Replace with your Production webhook URL
+        const VAPI_PUBLIC_KEY = 'YOUR_VAPI_PUBLIC_KEY_HERE'; // Replace with your Vapi Public Key
+
+        // Vapi Instantiation
+        const vapi = new Vapi(VAPI_PUBLIC_KEY);
+        let currentAssistantId = null;
+        let isCallActive = false;
+
+        // Form Handling
+        const form = document.getElementById('demo-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const loadingState = document.getElementById('loading-state');
+        const loadingText = document.getElementById('loading-text');
+        const generatorCard = document.getElementById('generator-card');
+        const demoInterface = document.getElementById('demo-interface');
+        const pulseEffect = document.getElementById('pulse-effect');
+        const callStatus = document.getElementById('call-status');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // UI Transition: Show Loading
+            form.classList.add('hidden');
+            loadingState.classList.remove('hidden');
+            
+            // Artificial steps for perceived value
+            setTimeout(() => loadingText.innerText = "Accessing website content...", 1000);
+            setTimeout(() => loadingText.innerText = "Analyzing business model...", 2500);
+            setTimeout(() => loadingText.innerText = "Configuring voice model...", 4500);
+
+            const url = document.getElementById('website-url').value;
+            const email = document.getElementById('email').value;
+
+            try {
+                // Call n8n Webhook
+                const response = await fetch(N8N_WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ url, email })
+                });
+                
+                const data = await response.json();
+                
+                if (data.status === 'success' && data.assistant_id) {
+                    currentAssistantId = data.assistant_id;
+                    showDemoInterface();
+                } else {
+                    throw new Error('Failed to create agent');
+                }
+            } catch (error) {
+                alert("Something went wrong. Please check the URL and try again.");
+                location.reload();
+            }
+        });
+
+        function showDemoInterface() {
+            generatorCard.classList.add('hidden');
+            demoInterface.classList.remove('hidden');
+        }
+
+        // Call Handling
+        function toggleCall() {
+            if (!isCallActive) {
+                if (currentAssistantId) {
+                    vapi.start(currentAssistantId);
+                    callStatus.innerText = "Connecting...";
+                }
+            } else {
+                vapi.stop();
+            }
+        }
+
+        // Vapi Event Listeners
+        vapi.on('call-start', () => {
+            isCallActive = true;
+            callStatus.innerText = "Listening... (Speak now)";
+            pulseEffect.classList.remove('hidden');
+            pulseEffect.classList.add('pulse-ring');
+            document.getElementById('start-call-btn').classList.add('bg-red-600', 'hover:bg-red-700');
+            document.getElementById('start-call-btn').classList.remove('bg-indigo-600', 'hover:bg-indigo-500');
+        });
+
+        vapi.on('call-end', () => {
+            isCallActive = false;
+            callStatus.innerText = "Call ended. Click to restart.";
+            pulseEffect.classList.add('hidden');
+            pulseEffect.classList.remove('pulse-ring');
+            document.getElementById('start-call-btn').classList.remove('bg-red-600', 'hover:bg-red-700');
+            document.getElementById('start-call-btn').classList.add('bg-indigo-600', 'hover:bg-indigo-500');
+        });
+
+        vapi.on('speech-start', () => {
+            callStatus.innerText = "Agent is speaking...";
+        });
+
+        vapi.on('speech-end', () => {
+            callStatus.innerText = "Listening...";
+        });
+        
+    </script>
+</body>
+</html>

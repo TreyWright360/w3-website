@@ -1,0 +1,396 @@
+{
+  "services": [
+    {
+      "id": "ai-employee",
+      "name": "Complete AI Employee",
+      "tagline": "The world's first Claude-powered Complete AI Employee",
+      "description": "Replaces $10K/month in staff costs with 4 integrated AI systems: Voice Receptionist, Chat Support, Database Reactivation, and Reputation Management.",
+      "icon": "brain",
+      "priceDisplay": "$2,997 one-time + $997/mo",
+      "priceValue": 2997,
+      "features": [
+        "24/7 AI Voice Receptionist",
+        "Multi-channel Chat Support",
+        "Automated Database Reactivation",
+        "Review Management System",
+        "Lead Qualification & Booking",
+        "CRM Integration",
+        "Custom Training on Your Business",
+        "30-Day Implementation"
+      ],
+      "ctaText": "Deploy AI Employee",
+      "ctaLink": "#pricing",
+      "highlighted": true
+    },
+    {
+      "id": "voice-ai",
+      "name": "Voice AI Receptionist",
+      "tagline": "Never miss a call again",
+      "description": "24/7 AI phone answering that qualifies leads, books appointments, answers FAQs, and transfers to humans when needed.",
+      "icon": "phone",
+      "priceDisplay": "$1,497 one-time + $297/mo",
+      "priceValue": 1497,
+      "features": [
+        "24/7 Call Answering",
+        "Appointment Booking",
+        "Lead Qualification",
+        "FAQ Handling",
+        "Call Transfers",
+        "Voicemail Transcription",
+        "Calendar Integration"
+      ],
+      "ctaText": "Get Voice AI",
+      "ctaLink": "#pricing",
+      "highlighted": false
+    },
+    {
+      "id": "ai-ads",
+      "name": "AI Cinematic Ad Campaigns",
+      "tagline": "Hollywood-style product ads from one photo",
+      "description": "Professional AI-generated video ads featuring consistent brand ambassadors, cinematic effects, and professional voiceovers.",
+      "icon": "video",
+      "priceDisplay": "$997 per campaign",
+      "priceValue": 997,
+      "features": [
+        "AI Brand Ambassador",
+        "5 Video Variations",
+        "Professional Voiceovers",
+        "Cinematic Effects",
+        "Social Media Formats",
+        "Unlimited Revisions"
+      ],
+      "ctaText": "View Samples",
+      "ctaLink": "/demos/ai-ad-campaigns.html",
+      "highlighted": false
+    },
+    {
+      "id": "web-voice",
+      "name": "Web Voice Widget",
+      "tagline": "The 'Click-to-Talk' Website Agent",
+      "description": "A microphone button for your website or Instagram. Customers click and talk instantly. No phone number, zero monthly fees.",
+      "icon": "globe",
+      "priceDisplay": "$497 Setup (One-Time)",
+      "priceValue": 497,
+      "features": [
+        "Click-to-Talk Interface",
+        "Zero Monthly Fees ($0/mo)",
+        "Perfect for Link-in-Bio",
+        "Instant Lead Qualification",
+        "Works on any Website"
+      ],
+      "ctaText": "Get Free Voice",
+      "ctaLink": "#pricing",
+      "highlighted": true
+    },
+    {
+      "id": "research-arbitrage",
+      "name": "Research Arbitrage",
+      "tagline": "99% Profit Margin Market Intelligence",
+      "description": "AI-powered competitive intelligence delivered in 24-48 hours. What traditional firms charge $10K for, we deliver for $500-1,500.",
+      "icon": "search",
+      "priceDisplay": "$500 - $1,500",
+      "priceValue": 500,
+      "features": [
+        "Deep Competitor Audit",
+        "Trend Analysis",
+        "Content Calendar",
+        "Strategy Deck",
+        "24-48h Delivery"
+      ],
+      "ctaText": "Fastest ROI",
+      "ctaLink": "/research-arbitrage.html",
+      "highlighted": false
+    }
+  ],
+  "pricingTiers": [
+    {
+      "id": "web-voice-lite",
+      "name": "Web Voice Lite",
+      "monthlyPrice": 0,
+      "setupFee": 497,
+      "description": "Zero monthly fees. Perfect for solopreneurs.",
+      "features": [
+        { "name": "Web-Based Voice Agent", "included": true },
+        { "name": "Click-to-Talk Link", "included": true },
+        { "name": "Zero Monthly Cost", "included": true },
+        { "name": "Lead Qualification", "included": true },
+        { "name": "Phone Number", "included": false },
+        { "name": "SMS / Texting", "included": false },
+        { "name": "CRM Integration", "included": false }
+      ],
+      "savings": "No monthly recurring fees ever",
+      "recommended": false,
+      "ctaText": "Get Lite"
+    },
+    {
+      "id": "starter",
+      "name": "Voice AI Starter",
+      "monthlyPrice": 297,
+      "setupFee": 1497,
+      "description": "Perfect for small businesses wanting 24/7 phone support",
+      "features": [
+        { "name": "24/7 AI Voice Receptionist", "included": true },
+        { "name": "Appointment Booking", "included": true },
+        { "name": "Lead Qualification", "included": true },
+        { "name": "CRM Integration", "included": true },
+        { "name": "Chat Support", "included": false },
+        { "name": "Database Reactivation", "included": false },
+        { "name": "Review Management", "included": false }
+      ],
+      "savings": "Save $36K/year vs hiring",
+      "recommended": false,
+      "ctaText": "Get Started"
+    },
+    {
+      "id": "professional",
+      "name": "AI Employee Pro",
+      "monthlyPrice": 997,
+      "setupFee": 2997,
+      "description": "Complete AI automation for growing businesses",
+      "features": [
+        { "name": "24/7 AI Voice Receptionist", "included": true },
+        { "name": "Appointment Booking", "included": true },
+        { "name": "Lead Qualification", "included": true },
+        { "name": "CRM Integration", "included": true },
+        { "name": "Multi-Channel Chat Support", "included": true },
+        { "name": "Database Reactivation", "included": true },
+        { "name": "Review Management", "included": true }
+      ],
+      "savings": "Save $58,560/year vs GoHighLevel",
+      "recommended": true,
+      "ctaText": "Deploy Now"
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise",
+      "monthlyPrice": 2497,
+      "setupFee": 7997,
+      "description": "Custom AI solutions for larger organizations",
+      "features": [
+        { "name": "Everything in Pro", "included": true },
+        { "name": "Multi-Location Support", "included": true },
+        { "name": "Custom Integrations", "included": true },
+        { "name": "Dedicated Success Manager", "included": true },
+        { "name": "Priority Support", "included": true },
+        { "name": "HIPAA Compliance", "included": true },
+        { "name": "White-Label Options", "included": true }
+      ],
+      "savings": "Custom ROI analysis",
+      "recommended": false,
+      "ctaText": "Contact Sales"
+    }
+  ],
+  "comparison": {
+    "competitor": "GoHighLevel",
+    "competitorMonthly": 2997,
+    "ourMonthly": 997,
+    "savingsPercent": 73,
+    "annualSavings": 24000,
+    "features": [
+      { "name": "AI Voice Receptionist", "competitor": "Extra $500/mo", "us": "Included" },
+      { "name": "Advanced Claude AI", "competitor": "Not Available", "us": "Included" },
+      { "name": "Setup & Training", "competitor": "$5,000+", "us": "$2,997" },
+      { "name": "Vendor Lock-In", "competitor": "Yes", "us": "No - You Own It" },
+      { "name": "HIPAA Ready", "competitor": "Extra Cost", "us": "Included" }
+    ]
+  },
+  "testimonials": [
+    {
+      "id": "t1",
+      "clientName": "Dr. Sarah Mitchell",
+      "clientTitle": "Owner",
+      "clientCompany": "Mitchell Family Dental",
+      "clientImage": "/images/testimonials/sarah.jpg",
+      "quote": "Our AI receptionist handles 80% of our calls now. We've booked 40 more appointments per month without adding staff.",
+      "videoUrl": null,
+      "metrics": [
+        { "label": "More Appointments", "value": 40, "unit": "/month" },
+        { "label": "Calls Handled by AI", "value": 80, "unit": "%" },
+        { "label": "Staff Hours Saved", "value": 25, "unit": "hrs/week" }
+      ]
+    },
+    {
+      "id": "t2",
+      "clientName": "Marcus Johnson",
+      "clientTitle": "CEO",
+      "clientCompany": "Johnson Real Estate Group",
+      "clientImage": "/images/testimonials/marcus.jpg",
+      "quote": "The database reactivation alone brought in $47K in the first month. The AI found opportunities we'd completely forgotten about.",
+      "videoUrl": "/videos/testimonials/marcus.mp4",
+      "metrics": [
+        { "label": "Revenue Generated", "value": 47000, "unit": "$" },
+        { "label": "Leads Reactivated", "value": 127, "unit": "" },
+        { "label": "ROI", "value": 1567, "unit": "%" }
+      ]
+    },
+    {
+      "id": "t3",
+      "clientName": "Jennifer Park",
+      "clientTitle": "Practice Manager",
+      "clientCompany": "Wellness Med Spa",
+      "clientImage": "/images/testimonials/jennifer.jpg",
+      "quote": "We switched from GoHighLevel and cut our costs by 70%. Plus the AI is actually smarter and handles complex bookings.",
+      "videoUrl": null,
+      "metrics": [
+        { "label": "Cost Reduction", "value": 70, "unit": "%" },
+        { "label": "Annual Savings", "value": 42000, "unit": "$" },
+        { "label": "Implementation Time", "value": 2, "unit": "weeks" }
+      ]
+    }
+  ],
+  "liveStats": {
+    "callsToday": 147,
+    "appointmentsBooked": 23,
+    "avgResponseTime": "1.2s",
+    "satisfactionScore": 94,
+    "totalCallsHandled": 12847,
+    "totalRevenueGenerated": 847000,
+    "lastUpdated": "2026-01-01T01:50:00Z"
+  },
+  "faqs": [
+    {
+      "id": "faq1",
+      "question": "Why is this 73% cheaper than GoHighLevel?",
+      "answer": "GoHighLevel charges $297-497/month for their platform, plus $500+/month for voice AI, plus implementation fees. We use Claude 3.7 Sonnet (free tier) with our own infrastructure, so you only pay for what you actually use. No bloated platform fees.",
+      "category": "pricing",
+      "order": 1
+    },
+    {
+      "id": "faq2",
+      "question": "How does your AI pricing compare to competitors?",
+      "answer": "Yes! Claude offers generous API pricing. We architect your AI systems to be cost-efficient with optimized token usage. Most businesses pay a fraction of what they'd spend on inferior AI solutions with $500+/month platforms.",
+      "category": "pricing",
+      "order": 2
+    },
+    {
+      "id": "faq3",
+      "question": "Can you migrate us from GoHighLevel?",
+      "answer": "Absolutely. We've migrated dozens of businesses from GHL. We transfer your contacts, automations (rebuilt better), and get you running within 2 weeks. Most clients are shocked at how much simpler and more effective our system is.",
+      "category": "migration",
+      "order": 3
+    },
+    {
+      "id": "faq4",
+      "question": "What if I need more customization?",
+      "answer": "That's the beauty of our approach—everything is customizable. Unlike GHL's one-size-fits-all platform, we build exactly what you need. Need a specific integration? Custom workflow? Industry-specific compliance? We build it.",
+      "category": "features",
+      "order": 4
+    },
+    {
+      "id": "faq5",
+      "question": "How long does implementation take?",
+      "answer": "Typical implementation is 2-4 weeks. Week 1: Discovery and setup. Week 2: Training and testing. Week 3: Go-live with monitoring. Week 4: Optimization and handoff. We're hands-on the entire time.",
+      "category": "implementation",
+      "order": 5
+    },
+    {
+      "id": "faq6",
+      "question": "Do I own the AI systems you build?",
+      "answer": "100% yes. Unlike GHL where you're locked into their platform, you own everything we build. Want to move? We'll hand over all code, configurations, and documentation. No vendor lock-in, ever.",
+      "category": "ownership",
+      "order": 6
+    }
+  ],
+  "contactOptions": [
+    {
+      "id": "voice",
+      "type": "voice",
+      "label": "Talk to Mia",
+      "description": "Experience our AI receptionist live",
+      "icon": "microphone",
+      "action": "+14698092574",
+      "primary": true
+    },
+    {
+      "id": "whatsapp",
+      "type": "whatsapp",
+      "label": "WhatsApp Us",
+      "description": "Chat with our AI on WhatsApp",
+      "icon": "whatsapp",
+      "action": "https://wa.me/14698092574",
+      "primary": false
+    },
+    {
+      "id": "email",
+      "type": "email",
+      "label": "Email Us",
+      "description": "We respond within 24 hours",
+      "icon": "envelope",
+      "action": "mailto:support@w3aisolutions.org",
+      "primary": false
+    },
+    {
+      "id": "calendar",
+      "type": "calendar",
+      "label": "Book a Call",
+      "description": "30-minute discovery call",
+      "icon": "calendar",
+      "action": "https://calendly.com/w3aisolutions",
+      "primary": false
+    }
+  ],
+  "voiceDemo": {
+    "agentName": "Mia",
+    "agentAvatar": "/images/mia-avatar.png",
+    "phoneNumber": "+1 (469) 809-2574",
+    "widgetType": "vapi",
+    "greeting": "Hi! I'm Mia, your AI assistant from W3 AI Solutions. How can I help you today?",
+    "suggestedQuestions": [
+      "What services do you offer?",
+      "How much does the AI employee cost?",
+      "Can I book a discovery call?",
+      "How is this different from GoHighLevel?",
+      "What industries do you work with?"
+    ]
+  },
+  "companyInfo": {
+    "name": "W3 AI Solutions",
+    "tagline": "AI Automation & Complete AI Employee Systems",
+    "location": "Dallas-Fort Worth, Texas",
+    "coverage": "Serving Nationwide",
+    "email": "support@w3aisolutions.org",
+    "phone": "+1 (469) 809-2574",
+    "founded": 2025,
+    "certifications": ["HIPAA-Ready", "SOC 2 Compliant"]
+  },
+  "footer": {
+    "logo": "/images/w3-logo.svg",
+    "tagline": "AI Automation & Complete AI Employee Systems",
+    "services": [
+      { "label": "Complete AI Employee", "href": "#services" },
+      { "label": "Voice AI Receptionist", "href": "#services" },
+      { "label": "AI Ad Campaigns", "href": "#services" },
+      { "label": "Pricing", "href": "#pricing" }
+    ],
+    "resources": [
+      { "label": "FAQ", "href": "#faq" },
+      { "label": "Case Studies", "href": "#testimonials" },
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Documentation", "href": "/docs" }
+    ],
+    "contactInfo": {
+      "email": "support@w3aisolutions.org",
+      "phone": "+1 (469) 809-2574",
+      "whatsapp": "https://wa.me/14698092574",
+      "location": "Dallas-Fort Worth, Texas"
+    },
+    "socialLinks": [
+      { "platform": "linkedin", "href": "https://linkedin.com/company/w3aisolutions" },
+      { "platform": "youtube", "href": "https://youtube.com/@w3aisolutions" },
+      { "platform": "twitter", "href": "https://twitter.com/w3aisolutions" }
+    ],
+    "legalLinks": [
+      { "label": "Privacy Policy", "href": "/privacy" },
+      { "label": "Terms of Service", "href": "/terms" },
+      { "label": "Cookie Policy", "href": "/cookies" }
+    ],
+    "copyright": "© 2026 W3 AI Solutions. All rights reserved."
+  },
+  "clientLogos": [
+    { "src": "/images/logos/client-1.png", "alt": "Client 1" },
+    { "src": "/images/logos/client-2.png", "alt": "Client 2" },
+    { "src": "/images/logos/client-3.png", "alt": "Client 3" },
+    { "src": "/images/logos/client-4.png", "alt": "Client 4" },
+    { "src": "/images/logos/client-5.png", "alt": "Client 5" }
+  ]
+}
