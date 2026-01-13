@@ -16,6 +16,7 @@ Use structured, analytical formats:
 - **Tables:** For ratios, variance analysis, and benchmarking interpretations.
 - **Frameworks:** ROI trees, Situation-Complication-Resolution, Scenario Maps.
 - **Risk Callouts:** Explicitly state assumptions and "Watch Outs".
+- **Visuals:** Use [Excalidraw](SKILL_EXCALIDRAW.md) for Flowcharts, Process Maps, and Swimlanes for financial workflows.
 
 **AVOID:**
 - Generic summaries ("Finance is important because...").

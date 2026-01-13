@@ -4,6 +4,7 @@ import { Button } from '../ui/Button';
 import { Container } from '../ui/Container';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '../../lib/utils';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 interface HeaderProps {
   onOpenDemo: () => void;
@@ -12,6 +13,8 @@ interface HeaderProps {
 export const Header = ({ onOpenDemo }: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,11 +24,30 @@ export const Header = ({ onOpenDemo }: HeaderProps) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavClick = (href: string) => {
+    setIsMobileMenuOpen(false);
+    if (href.startsWith('/')) {
+      navigate(href);
+    } else {
+      // If on a different page, go home first then scroll
+      if (location.pathname !== '/') {
+        navigate('/');
+        setTimeout(() => {
+          const element = document.querySelector(href);
+          element?.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      } else {
+        const element = document.querySelector(href);
+        element?.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   const menuItems = [
-    { label: 'Services', href: '#services' },
-    { label: 'Pricing', href: '#pricing' },
-    { label: 'Testimonials', href: '#testimonials' },
-    { label: 'FAQ', href: '#faq' },
+    { label: 'Services', href: '/#services' },
+    { label: 'Pricing', href: '/#pricing' },
+    { label: 'Vibe Coding', href: '/services/production-vibe-coding' },
+    { label: 'Claude Skills', href: '/services/claude-skills' },
   ];
 
   return (
@@ -39,20 +61,20 @@ export const Header = ({ onOpenDemo }: HeaderProps) => {
         )}
       >
         <Container className="h-full flex items-center justify-between">
-          <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <span className="text-[1.5rem] font-bold gradient-text">W3 AI Solutions</span>
-          </div>
+          </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
             {menuItems.map((item) => (
-              <a
+              <button
                 key={item.label}
-                href={item.href}
+                onClick={() => handleNavClick(item.href)}
                 className="text-[--text-secondary] hover:text-[--text-primary] text-[--text-sm] font-medium transition-colors"
               >
                 {item.label}
-              </a>
+              </button>
             ))}
             <Button onClick={onOpenDemo} size="sm">Talk to Mia</Button>
           </nav>
@@ -88,17 +110,16 @@ export const Header = ({ onOpenDemo }: HeaderProps) => {
               </div>
               <nav className="flex flex-col gap-6 items-center flex-1 justify-center">
                 {menuItems.map((item, index) => (
-                  <motion.a
+                  <motion.button
                     key={item.label}
-                    href={item.href}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={() => handleNavClick(item.href)}
                     className="text-[--text-xl] font-medium"
                   >
                     {item.label}
-                  </motion.a>
+                  </motion.button>
                 ))}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}

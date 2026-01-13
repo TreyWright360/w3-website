@@ -1,6 +1,44 @@
 {
   "services": [
     {
+      "id": "vibe-coding",
+      "name": "Production-Ready Vibe Coding",
+      "tagline": "Ship-Ready Code, Not Demos",
+      "description": "Transform your designs into scalable, production-ready applications. We use the Vibe Coding framework + Claude Skills to deliver code that scales.",
+      "icon": "brain",
+      "priceDisplay": "From $5,000",
+      "priceValue": 5000,
+      "features": [
+        "Scalable Architecture",
+        "React + Tailwind + TypeScript",
+        "Zero Hardcoded Values",
+        "Fully Responsive",
+        "SEO Optimized"
+      ],
+      "ctaText": "Start Build",
+      "ctaLink": "/services/production-vibe-coding",
+      "highlighted": true
+    },
+    {
+      "id": "claude-skills",
+      "name": "Claude Skills Implementation",
+      "tagline": "10x Your Dev Team",
+      "description": "Stop building demo code. We install 7 expert skills into your team's Claude/Cursor workflow to inject engineering best practices automatically.",
+      "icon": "brain",
+      "priceDisplay": "$2,500 One-Time",
+      "priceValue": 2500,
+      "features": [
+        "7 Expert Skills Installed",
+        "Frontend Design Principles",
+        "Error Handling & Safety",
+        "Database Architecture",
+        "Team Training Included"
+      ],
+      "ctaText": "Upgrade Team",
+      "ctaLink": "/services/claude-skills",
+      "highlighted": false
+    },
+    {
       "id": "ai-employee",
       "name": "Complete AI Employee",
       "tagline": "The world's first Claude-powered Complete AI Employee",

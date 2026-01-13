@@ -1,53 +1,40 @@
 import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
-import { Hero } from './components/sections/Hero';
-import { VoiceDemo } from './components/sections/VoiceDemo';
-import { InstantDemo } from './components/sections/InstantDemo';
-import { ServicesGrid } from './components/sections/ServicesGrid';
-import { PricingComparison } from './components/sections/PricingComparison';
-import { LiveStatsDashboard } from './components/sections/LiveStatsDashboard';
-import { SocialProof } from './components/sections/SocialProof';
-import { FAQ } from './components/sections/FAQ';
-import { Contact } from './components/sections/Contact';
-import { StickyCTA } from './components/layout/StickyCTA';
-import { SpeedToLead } from './components/sections/SpeedToLead';
-import { RoiCalculator } from './components/sections/RoiCalculator';
-import { SocialBotDemo } from './components/sections/SocialBotDemo';
-import { AvatarDemo } from './components/sections/AvatarDemo';
-import { EcosystemExplainer } from './components/sections/EcosystemExplainer';
-import { IndustryDemos } from './components/sections/IndustryDemos';
+import { Home } from './pages/Home';
+import { ProductionVibeCoding } from './pages/services/ProductionVibeCoding';
+import { ClaudeSkills } from './pages/services/ClaudeSkills';
+import AIReceptionistDashboard from './pages/dashboard/AIReceptionistDashboard';
 import { AnimatePresence, motion } from 'framer-motion';
+import { VoiceDemo } from './components/sections/VoiceDemo';
 
-function App() {
+function Layout() {
   const [isDemoOpen, setIsDemoOpen] = useState(false);
+  // const location = useLocation();
+
+  // Reset scroll on route change
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [location.pathname]);
 
   return (
     <div className="min-h-screen bg-[--bg-primary] text-[--text-primary] font-sans selection:bg-[--primary] selection:text-white">
       <Header onOpenDemo={() => setIsDemoOpen(true)} />
-      
+
       <main>
-        <Hero onOpenDemo={() => setIsDemoOpen(true)} />
-        <SpeedToLead />
-        <InstantDemo />
-        <VoiceDemo />
-        <EcosystemExplainer />
-        <IndustryDemos />
-        <RoiCalculator />
-        <AvatarDemo />
-        <SocialBotDemo />
-        <ServicesGrid />
-        <PricingComparison />
-        <LiveStatsDashboard />
-        <SocialProof />
-        <FAQ />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services/production-vibe-coding" element={<ProductionVibeCoding />} />
+          <Route path="/services/claude-skills" element={<ClaudeSkills />} />
+          <Route path="/dashboard" element={<AIReceptionistDashboard />} />
+          {/* Add more routes as we build them */}
+        </Routes>
       </main>
 
       <Footer />
-      <StickyCTA onOpenDemo={() => setIsDemoOpen(true)} />
 
-      {/* Voice Demo Modal */}
+      {/* Global Modals */}
       <AnimatePresence>
         {isDemoOpen && (
           <motion.div
@@ -68,6 +55,14 @@ function App() {
         )}
       </AnimatePresence>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Layout />
+    </Router>
   );
 }
 

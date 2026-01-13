@@ -36,3 +36,6 @@
 ## 6. Constraints & Optimization
 - **Latency:** Must be kept under 500ms-800ms to preserve the illusion of conversation.
 - **Cost Management:** Streaming video API costs can be high (per minute). Use specific triggers (high-intent pages) rather than always-on deployment.
+
+## 7. Tools
+- Use [Excalidraw](SKILL_EXCALIDRAW.md) to map out the state machine for the avatar's conversation states.

@@ -44,3 +44,4 @@
 
 ## 5. Deployment Guide
 - Use the `SKILL_SOCIAL_CHATBOT.md` for specific Make/n8n implementation steps.
+- Use [Excalidraw](SKILL_EXCALIDRAW.md) to visualize conversation flows and routing logic before building.
