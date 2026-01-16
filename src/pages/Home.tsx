@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Hero } from '../components/sections/Hero';
-import { VoiceDemo } from '../components/sections/VoiceDemo';
-import { InstantDemo } from '../components/sections/InstantDemo';
+// import { VoiceDemo } from '../components/sections/VoiceDemo';
 import { ServicesGrid } from '../components/sections/ServicesGrid';
 import { PricingComparison } from '../components/sections/PricingComparison';
 import { LiveStatsDashboard } from '../components/sections/LiveStatsDashboard';
@@ -22,8 +21,7 @@ export function Home() {
   return (
     <>
       <Hero onOpenDemo={() => setIsDemoOpen(true)} />
-      <InstantDemo />
-      <VoiceDemo />
+      {/* <VoiceDemo /> */}
       <EcosystemExplainer />
       <IndustryDemos />
       <RoiCalculator />
@@ -35,7 +33,7 @@ export function Home() {
       <SocialProof />
       <FAQ />
       <Contact />
-      
+
       <StickyCTA onOpenDemo={() => setIsDemoOpen(true)} />
 
       {/* Voice Demo Modal */}
@@ -53,7 +51,12 @@ export function Home() {
               exit={{ scale: 0.9, opacity: 0 }}
               className="w-full max-w-4xl"
             >
-              <VoiceDemo isModal onClose={() => setIsDemoOpen(false)} />
+              {/* <VoiceDemo isModal onClose={() => setIsDemoOpen(false)} /> */}
+              <div className="bg-[--bg-secondary] p-8 rounded-2xl text-center">
+                <h3 className="text-xl font-bold mb-4">Demo Unavailable</h3>
+                <p className="mb-6">The Voice Demo is currently disabled pending API configuration.</p>
+                <button onClick={() => setIsDemoOpen(false)} className="bg-[--primary] text-white px-4 py-2 rounded-lg">Close</button>
+              </div>
             </motion.div>
           </motion.div>
         )}

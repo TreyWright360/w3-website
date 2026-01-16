@@ -6,11 +6,23 @@ import { Home } from './pages/Home';
 import { ProductionVibeCoding } from './pages/services/ProductionVibeCoding';
 import { ClaudeSkills } from './pages/services/ClaudeSkills';
 import AIReceptionistDashboard from './pages/dashboard/AIReceptionistDashboard';
-import { AnimatePresence, motion } from 'framer-motion';
-import { VoiceDemo } from './components/sections/VoiceDemo';
+import { DemoLayout } from './layouts/DemoLayout';
+import { DemoHub } from './pages/demos/DemoHub';
+import { LeadMagnetsDemo } from './pages/demos/LeadMagnetsDemo';
+import { MassOutreachDemo } from './pages/demos/MassOutreachDemo';
+import { PhoneSupportDemo } from './pages/demos/PhoneSupportDemo';
+import { TextSupportDemo } from './pages/demos/TextSupportDemo';
+import { PersonalizedOutreachDemo } from './pages/demos/PersonalizedOutreachDemo';
+import { RagDemo } from './pages/demos/RagDemo';
+import { AppointmentSettingDemo } from './pages/demos/AppointmentSettingDemo';
+import { ProductizedInfoDemo } from './pages/demos/ProductizedInfoDemo';
+import { SalesAnalysisDemo } from './pages/demos/SalesAnalysisDemo';
+import { ContentRepurposingDemo } from './pages/demos/ContentRepurposingDemo';
+import { RecruitmentDemo } from './pages/demos/RecruitmentDemo';
+import { RestaurantDemo } from './pages/industries/RestaurantDemo';
+import { DentalDemo } from './pages/industries/DentalDemo';
 
 function Layout() {
-  const [isDemoOpen, setIsDemoOpen] = useState(false);
   // const location = useLocation();
 
   // Reset scroll on route change
@@ -20,7 +32,7 @@ function Layout() {
 
   return (
     <div className="min-h-screen bg-[--bg-primary] text-[--text-primary] font-sans selection:bg-[--primary] selection:text-white">
-      <Header onOpenDemo={() => setIsDemoOpen(true)} />
+      <Header />
 
       <main>
         <Routes>
@@ -28,32 +40,31 @@ function Layout() {
           <Route path="/services/production-vibe-coding" element={<ProductionVibeCoding />} />
           <Route path="/services/claude-skills" element={<ClaudeSkills />} />
           <Route path="/dashboard" element={<AIReceptionistDashboard />} />
-          {/* Add more routes as we build them */}
+
+          {/* Industry Vertical Routes */}
+          <Route path="/industries/restaurants" element={<RestaurantDemo />} />
+          <Route path="/industries/dental" element={<DentalDemo />} />
+
+          {/* Demo Hub Routes (Legacy/Functional) */}
+          <Route path="/demos" element={<DemoLayout />}>
+            <Route index element={<DemoHub />} />
+            <Route path="lead-magnets" element={<LeadMagnetsDemo />} />
+            <Route path="mass-outreach" element={<MassOutreachDemo />} />
+            <Route path="phone-support" element={<PhoneSupportDemo />} />
+            <Route path="text-support" element={<TextSupportDemo />} />
+            <Route path="personalized-outreach" element={<PersonalizedOutreachDemo />} />
+            <Route path="information-retrieval" element={<RagDemo />} />
+            <Route path="appointment-setting" element={<AppointmentSettingDemo />} />
+            <Route path="productized-info" element={<ProductizedInfoDemo />} />
+            <Route path="sales-analysis" element={<SalesAnalysisDemo />} />
+            <Route path="content-repurposing" element={<ContentRepurposingDemo />} />
+            <Route path="recruitment" element={<RecruitmentDemo />} />
+            {/* We will add individual demo routes here as we build them */}
+          </Route>
         </Routes>
       </main>
 
       <Footer />
-
-      {/* Global Modals */}
-      <AnimatePresence>
-        {isDemoOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[--z-modal] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="w-full max-w-4xl"
-            >
-              <VoiceDemo isModal onClose={() => setIsDemoOpen(false)} />
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 }

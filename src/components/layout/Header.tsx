@@ -6,11 +6,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '../../lib/utils';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-interface HeaderProps {
-  onOpenDemo: () => void;
-}
+// interface HeaderProps {
+//   onOpenDemo: () => void;
+// }
 
-export const Header = ({ onOpenDemo }: HeaderProps) => {
+export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
@@ -76,7 +76,9 @@ export const Header = ({ onOpenDemo }: HeaderProps) => {
                 {item.label}
               </button>
             ))}
-            <Button onClick={onOpenDemo} size="sm">Talk to Mia</Button>
+            <Link to="/demos">
+              <Button size="sm">Talk to Mia</Button>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -127,12 +129,11 @@ export const Header = ({ onOpenDemo }: HeaderProps) => {
                   transition={{ delay: 0.4 }}
                   className="mt-4"
                 >
-                  <Button onClick={() => {
-                    onOpenDemo();
-                    setIsMobileMenuOpen(false);
-                  }} size="lg">
-                    Talk to Mia
-                  </Button>
+                  <Link to="/demos" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Button size="lg">
+                      Talk to Mia
+                    </Button>
+                  </Link>
                 </motion.div>
               </nav>
             </div>
