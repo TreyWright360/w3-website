@@ -152,16 +152,6 @@ export function MeetMia() {
                     </div>
                 </motion.div>
 
-                {/* Powered by text */}
-                <motion.p
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.5 }}
-                    className="text-center mt-6 text-sm text-[--text-secondary]"
-                >
-                    Powered by <span className="text-[--text-primary]">Vapi</span> & <span className="text-[--text-primary]">Claude AI</span>
-                </motion.p>
             </div>
         </section>
     );
