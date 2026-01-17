@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 import { Home } from './pages/Home';
+import { LandingPage } from './pages/LandingPage';
 import { ProductionVibeCoding } from './pages/services/ProductionVibeCoding';
 import { AIBusinessWebsite } from './pages/services/AIBusinessWebsite';
 import AIReceptionistDashboard from './pages/dashboard/AIReceptionistDashboard';
@@ -36,6 +37,7 @@ function Layout() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/landing" element={<LandingPage />} />
           <Route path="/services/production-vibe-coding" element={<ProductionVibeCoding />} />
           <Route path="/services/ai-business-website" element={<AIBusinessWebsite />} />
           <Route path="/dashboard" element={<AIReceptionistDashboard />} />
