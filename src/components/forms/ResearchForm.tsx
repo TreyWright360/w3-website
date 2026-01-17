@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
     Building2, Target, Users, Sparkles,
     ArrowRight, ArrowLeft, Check, Loader2,
-    Globe, Mail, Phone, Briefcase
+    Globe, Mail, Phone
 } from 'lucide-react';
 
 // Form sections
