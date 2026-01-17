@@ -14,6 +14,7 @@ import { EcosystemExplainer } from '../components/sections/EcosystemExplainer';
 import { IndustryDemos } from '../components/sections/IndustryDemos';
 import { StickyCTA } from '../components/layout/StickyCTA';
 import { MeetMia } from '../components/sections/MeetMia';
+import { ResearchForm } from '../components/forms/ResearchForm';
 import { AnimatePresence, motion } from 'framer-motion';
 
 export function Home() {
@@ -34,6 +35,43 @@ export function Home() {
       <LiveStatsDashboard />
       <SocialProof />
       <FAQ />
+
+      {/* Get Your Free Demo Package */}
+      <section id="get-demo" className="py-20 px-4 bg-gradient-to-b from-[--bg-primary] to-[--bg-secondary]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Get Your Free Custom Demo Package
+            </h2>
+            <p className="text-xl text-[--text-secondary] max-w-3xl mx-auto">
+              Tell us about your business and we'll create a complete AI solution demo tailored specifically for you - including a custom website, voice agent, chatbot, and promotional videos.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 mt-6 text-sm">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                <span>Custom Demo Website</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                <span>AI Voice Receptionist</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                <span>Web Chatbot</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                <span>3 Promotional Videos</span>
+              </div>
+            </div>
+          </div>
+
+          <ResearchForm onSubmitSuccess={(jobId) => {
+            console.log('Research started:', jobId);
+          }} />
+        </div>
+      </section>
+
       <Contact />
 
       <StickyCTA onOpenDemo={() => setIsDemoOpen(true)} />
