@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2, DollarSign, Play, Phone, Star } from 'lucide-react';
+import { Play, Phone, Star } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Container } from '../ui/Container';
 

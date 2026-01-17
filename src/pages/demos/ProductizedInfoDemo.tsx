@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { DemoPageTemplate } from '../../components/demos/DemoPageTemplate';
-import { BookOpen, TableProperties, ArrowRight, DollarSign, Download, Lock } from 'lucide-react';
+import { BookOpen, TableProperties, Download } from 'lucide-react';
 
 export function ProductizedInfoDemo() {
     const [reportValue, setReportValue] = useState(2500);
-    const [salesVolume, setSalesVolume] = useState(10);
+    const salesVolume = 10;
 
     const manualRevenue = salesVolume * reportValue;
     const productizedRevenue = salesVolume * reportValue * 10; // Scaling effect

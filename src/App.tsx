@@ -1,10 +1,9 @@
-import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 import { Home } from './pages/Home';
 import { ProductionVibeCoding } from './pages/services/ProductionVibeCoding';
-import { ClaudeSkills } from './pages/services/ClaudeSkills';
+import { AIBusinessWebsite } from './pages/services/AIBusinessWebsite';
 import AIReceptionistDashboard from './pages/dashboard/AIReceptionistDashboard';
 import { DemoLayout } from './layouts/DemoLayout';
 import { DemoHub } from './pages/demos/DemoHub';
@@ -38,7 +37,7 @@ function Layout() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services/production-vibe-coding" element={<ProductionVibeCoding />} />
-          <Route path="/services/claude-skills" element={<ClaudeSkills />} />
+          <Route path="/services/ai-business-website" element={<AIBusinessWebsite />} />
           <Route path="/dashboard" element={<AIReceptionistDashboard />} />
 
           {/* Industry Vertical Routes */}

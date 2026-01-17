@@ -30,3 +30,22 @@ Thumbs.db
 
 # Vercel
 .vercel
+
+# Video/Media files (too large for git)
+*.mp4
+*.mov
+*.avi
+
+# Transcripts and text files in root
+*.txt
+
+# Backend folder (separate repo)
+backend/
+
+# Design files
+design-os/
+pictures for the website/
+
+# Test files
+test-api.html
+test-api.json

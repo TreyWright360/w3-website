@@ -1,5 +1,5 @@
 import { IndustryPageTemplate } from '../../components/industries/IndustryPageTemplate';
-import { Utensils, PhoneOff, TrendingUp, Clock, MessageSquare, ShieldCheck } from 'lucide-react';
+import { PhoneOff, TrendingUp, MessageSquare, ShieldCheck } from 'lucide-react';
 
 export function RestaurantDemo() {
     return (

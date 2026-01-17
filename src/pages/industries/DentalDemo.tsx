@@ -1,5 +1,5 @@
 import { IndustryPageTemplate } from '../../components/industries/IndustryPageTemplate';
-import { Siren, FileCheck, CalendarClock, Phoneb, ShieldAlert, Activity } from 'lucide-react';
+import { Siren, FileCheck, CalendarClock, Activity } from 'lucide-react';
 
 export function DentalDemo() {
     return (

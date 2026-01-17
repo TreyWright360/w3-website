@@ -1,8 +1,8 @@
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { DemoPageTemplate } from '../../components/demos/DemoPageTemplate';
-import { MessageSquare, Clock, CheckCircle2, DollarSign, Users, Zap } from 'lucide-react';
+import { Users, Zap } from 'lucide-react';
 
 export function TextSupportDemo() {
     const [ticketVolume, setTicketVolume] = useState(500);

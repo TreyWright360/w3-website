@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { DemoPageTemplate } from '../../components/demos/DemoPageTemplate';
-import { Calendar, Clock, ArrowRight, CheckCircle2, XCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export function AppointmentSettingDemo() {
     const [hoursWasted, setHoursWasted] = useState(5);

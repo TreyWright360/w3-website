@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { DemoPageTemplate } from '../../components/demos/DemoPageTemplate';
 import { Phone, BarChart3, AlertTriangle, CheckCircle, Search, TrendingUp } from 'lucide-react';
 

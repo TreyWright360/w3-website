@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { DemoPageTemplate } from '../../components/demos/DemoPageTemplate';
 import { Video, Youtube, Twitter, Linkedin, Scissors, Sparkles, Check } from 'lucide-react';
 

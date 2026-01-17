@@ -20,22 +20,22 @@
       "highlighted": true
     },
     {
-      "id": "claude-skills",
-      "name": "Claude Skills Implementation",
-      "tagline": "10x Your Dev Team",
-      "description": "Stop building demo code. We install 7 expert skills into your team's Claude/Cursor workflow to inject engineering best practices automatically.",
-      "icon": "brain",
-      "priceDisplay": "$2,500 One-Time",
+      "id": "ai-business-website",
+      "name": "AI Business Website",
+      "tagline": "Stunning Websites That Convert",
+      "description": "Gorgeous, scroll-stopping websites with animated hero sections, conversion-optimized copy, and premium UI components. Built with the P.A.G.E.S Framework.",
+      "icon": "globe",
+      "priceDisplay": "From $2,500",
       "priceValue": 2500,
       "features": [
-        "7 Expert Skills Installed",
-        "Frontend Design Principles",
-        "Error Handling & Safety",
-        "Database Architecture",
-        "Team Training Included"
+        "Scroll-Stopping Hero Animation",
+        "Conversion-Optimized Copy",
+        "Premium UI Components",
+        "Custom Domain Deployment",
+        "Mobile Responsive"
       ],
-      "ctaText": "Upgrade Team",
-      "ctaLink": "/services/claude-skills",
+      "ctaText": "Build My Website",
+      "ctaLink": "/services/ai-business-website",
       "highlighted": false
     },
     {
@@ -148,13 +148,34 @@
       "setupFee": 497,
       "description": "Zero monthly fees. Perfect for solopreneurs.",
       "features": [
-        { "name": "Web-Based Voice Agent", "included": true },
-        { "name": "Click-to-Talk Link", "included": true },
-        { "name": "Zero Monthly Cost", "included": true },
-        { "name": "Lead Qualification", "included": true },
-        { "name": "Phone Number", "included": false },
-        { "name": "SMS / Texting", "included": false },
-        { "name": "CRM Integration", "included": false }
+        {
+          "name": "Web-Based Voice Agent",
+          "included": true
+        },
+        {
+          "name": "Click-to-Talk Link",
+          "included": true
+        },
+        {
+          "name": "Zero Monthly Cost",
+          "included": true
+        },
+        {
+          "name": "Lead Qualification",
+          "included": true
+        },
+        {
+          "name": "Phone Number",
+          "included": false
+        },
+        {
+          "name": "SMS / Texting",
+          "included": false
+        },
+        {
+          "name": "CRM Integration",
+          "included": false
+        }
       ],
       "savings": "No monthly recurring fees ever",
       "recommended": false,
@@ -167,13 +188,34 @@
       "setupFee": 1497,
       "description": "Perfect for small businesses wanting 24/7 phone support",
       "features": [
-        { "name": "24/7 AI Voice Receptionist", "included": true },
-        { "name": "Appointment Booking", "included": true },
-        { "name": "Lead Qualification", "included": true },
-        { "name": "CRM Integration", "included": true },
-        { "name": "Chat Support", "included": false },
-        { "name": "Database Reactivation", "included": false },
-        { "name": "Review Management", "included": false }
+        {
+          "name": "24/7 AI Voice Receptionist",
+          "included": true
+        },
+        {
+          "name": "Appointment Booking",
+          "included": true
+        },
+        {
+          "name": "Lead Qualification",
+          "included": true
+        },
+        {
+          "name": "CRM Integration",
+          "included": true
+        },
+        {
+          "name": "Chat Support",
+          "included": false
+        },
+        {
+          "name": "Database Reactivation",
+          "included": false
+        },
+        {
+          "name": "Review Management",
+          "included": false
+        }
       ],
       "savings": "Save $36K/year vs hiring",
       "recommended": false,
@@ -186,13 +228,34 @@
       "setupFee": 2997,
       "description": "Complete AI automation for growing businesses",
       "features": [
-        { "name": "24/7 AI Voice Receptionist", "included": true },
-        { "name": "Appointment Booking", "included": true },
-        { "name": "Lead Qualification", "included": true },
-        { "name": "CRM Integration", "included": true },
-        { "name": "Multi-Channel Chat Support", "included": true },
-        { "name": "Database Reactivation", "included": true },
-        { "name": "Review Management", "included": true }
+        {
+          "name": "24/7 AI Voice Receptionist",
+          "included": true
+        },
+        {
+          "name": "Appointment Booking",
+          "included": true
+        },
+        {
+          "name": "Lead Qualification",
+          "included": true
+        },
+        {
+          "name": "CRM Integration",
+          "included": true
+        },
+        {
+          "name": "Multi-Channel Chat Support",
+          "included": true
+        },
+        {
+          "name": "Database Reactivation",
+          "included": true
+        },
+        {
+          "name": "Review Management",
+          "included": true
+        }
       ],
       "savings": "Save $58,560/year vs GoHighLevel",
       "recommended": true,
@@ -205,13 +268,34 @@
       "setupFee": 7997,
       "description": "Custom AI solutions for larger organizations",
       "features": [
-        { "name": "Everything in Pro", "included": true },
-        { "name": "Multi-Location Support", "included": true },
-        { "name": "Custom Integrations", "included": true },
-        { "name": "Dedicated Success Manager", "included": true },
-        { "name": "Priority Support", "included": true },
-        { "name": "HIPAA Compliance", "included": true },
-        { "name": "White-Label Options", "included": true }
+        {
+          "name": "Everything in Pro",
+          "included": true
+        },
+        {
+          "name": "Multi-Location Support",
+          "included": true
+        },
+        {
+          "name": "Custom Integrations",
+          "included": true
+        },
+        {
+          "name": "Dedicated Success Manager",
+          "included": true
+        },
+        {
+          "name": "Priority Support",
+          "included": true
+        },
+        {
+          "name": "HIPAA Compliance",
+          "included": true
+        },
+        {
+          "name": "White-Label Options",
+          "included": true
+        }
       ],
       "savings": "Custom ROI analysis",
       "recommended": false,
@@ -225,11 +309,31 @@
     "savingsPercent": 73,
     "annualSavings": 24000,
     "features": [
-      { "name": "AI Voice Receptionist", "competitor": "Extra $500/mo", "us": "Included" },
-      { "name": "Advanced Claude AI", "competitor": "Not Available", "us": "Included" },
-      { "name": "Setup & Training", "competitor": "$5,000+", "us": "$2,997" },
-      { "name": "Vendor Lock-In", "competitor": "Yes", "us": "No - You Own It" },
-      { "name": "HIPAA Ready", "competitor": "Extra Cost", "us": "Included" }
+      {
+        "name": "AI Voice Receptionist",
+        "competitor": "Extra $500/mo",
+        "us": "Included"
+      },
+      {
+        "name": "Advanced Claude AI",
+        "competitor": "Not Available",
+        "us": "Included"
+      },
+      {
+        "name": "Setup & Training",
+        "competitor": "$5,000+",
+        "us": "$2,997"
+      },
+      {
+        "name": "Vendor Lock-In",
+        "competitor": "Yes",
+        "us": "No - You Own It"
+      },
+      {
+        "name": "HIPAA Ready",
+        "competitor": "Extra Cost",
+        "us": "Included"
+      }
     ]
   },
   "testimonials": [
@@ -242,9 +346,21 @@
       "quote": "Our AI receptionist handles 80% of our calls now. We've booked 40 more appointments per month without adding staff.",
       "videoUrl": null,
       "metrics": [
-        { "label": "More Appointments", "value": 40, "unit": "/month" },
-        { "label": "Calls Handled by AI", "value": 80, "unit": "%" },
-        { "label": "Staff Hours Saved", "value": 25, "unit": "hrs/week" }
+        {
+          "label": "More Appointments",
+          "value": 40,
+          "unit": "/month"
+        },
+        {
+          "label": "Calls Handled by AI",
+          "value": 80,
+          "unit": "%"
+        },
+        {
+          "label": "Staff Hours Saved",
+          "value": 25,
+          "unit": "hrs/week"
+        }
       ]
     },
     {
@@ -256,9 +372,21 @@
       "quote": "The database reactivation alone brought in $47K in the first month. The AI found opportunities we'd completely forgotten about.",
       "videoUrl": "/videos/testimonials/marcus.mp4",
       "metrics": [
-        { "label": "Revenue Generated", "value": 47000, "unit": "$" },
-        { "label": "Leads Reactivated", "value": 127, "unit": "" },
-        { "label": "ROI", "value": 1567, "unit": "%" }
+        {
+          "label": "Revenue Generated",
+          "value": 47000,
+          "unit": "$"
+        },
+        {
+          "label": "Leads Reactivated",
+          "value": 127,
+          "unit": ""
+        },
+        {
+          "label": "ROI",
+          "value": 1567,
+          "unit": "%"
+        }
       ]
     },
     {
@@ -270,9 +398,21 @@
       "quote": "We switched from GoHighLevel and cut our costs by 70%. Plus the AI is actually smarter and handles complex bookings.",
       "videoUrl": null,
       "metrics": [
-        { "label": "Cost Reduction", "value": 70, "unit": "%" },
-        { "label": "Annual Savings", "value": 42000, "unit": "$" },
-        { "label": "Implementation Time", "value": 2, "unit": "weeks" }
+        {
+          "label": "Cost Reduction",
+          "value": 70,
+          "unit": "%"
+        },
+        {
+          "label": "Annual Savings",
+          "value": 42000,
+          "unit": "$"
+        },
+        {
+          "label": "Implementation Time",
+          "value": 2,
+          "unit": "weeks"
+        }
       ]
     }
   ],
@@ -389,22 +529,49 @@
     "email": "support@w3aisolutions.org",
     "phone": "+1 (469) 809-2574",
     "founded": 2025,
-    "certifications": ["HIPAA-Ready", "SOC 2 Compliant"]
+    "certifications": [
+      "HIPAA-Ready",
+      "SOC 2 Compliant"
+    ]
   },
   "footer": {
     "logo": "/images/w3-logo.svg",
     "tagline": "AI Automation & Complete AI Employee Systems",
     "services": [
-      { "label": "Complete AI Employee", "href": "#services" },
-      { "label": "Voice AI Receptionist", "href": "#services" },
-      { "label": "AI Ad Campaigns", "href": "#services" },
-      { "label": "Pricing", "href": "#pricing" }
+      {
+        "label": "Complete AI Employee",
+        "href": "#services"
+      },
+      {
+        "label": "Voice AI Receptionist",
+        "href": "#services"
+      },
+      {
+        "label": "AI Ad Campaigns",
+        "href": "#services"
+      },
+      {
+        "label": "Pricing",
+        "href": "#pricing"
+      }
     ],
     "resources": [
-      { "label": "FAQ", "href": "#faq" },
-      { "label": "Case Studies", "href": "#testimonials" },
-      { "label": "Blog", "href": "/blog" },
-      { "label": "Documentation", "href": "/docs" }
+      {
+        "label": "FAQ",
+        "href": "#faq"
+      },
+      {
+        "label": "Case Studies",
+        "href": "#testimonials"
+      },
+      {
+        "label": "Blog",
+        "href": "/blog"
+      },
+      {
+        "label": "Documentation",
+        "href": "/docs"
+      }
     ],
     "contactInfo": {
       "email": "support@w3aisolutions.org",
@@ -413,22 +580,55 @@
       "location": "Dallas-Fort Worth, Texas"
     },
     "socialLinks": [
-      { "platform": "linkedin", "href": "https://linkedin.com/company/w3aisolutions" },
-      { "platform": "youtube", "href": "https://youtube.com/@w3aisolutions" },
-      { "platform": "twitter", "href": "https://twitter.com/w3aisolutions" }
+      {
+        "platform": "linkedin",
+        "href": "https://linkedin.com/company/w3aisolutions"
+      },
+      {
+        "platform": "youtube",
+        "href": "https://youtube.com/@w3aisolutions"
+      },
+      {
+        "platform": "twitter",
+        "href": "https://twitter.com/w3aisolutions"
+      }
     ],
     "legalLinks": [
-      { "label": "Privacy Policy", "href": "/privacy" },
-      { "label": "Terms of Service", "href": "/terms" },
-      { "label": "Cookie Policy", "href": "/cookies" }
+      {
+        "label": "Privacy Policy",
+        "href": "/privacy"
+      },
+      {
+        "label": "Terms of Service",
+        "href": "/terms"
+      },
+      {
+        "label": "Cookie Policy",
+        "href": "/cookies"
+      }
     ],
     "copyright": "© 2026 W3 AI Solutions. All rights reserved."
   },
   "clientLogos": [
-    { "src": "/images/logos/client-1.png", "alt": "Client 1" },
-    { "src": "/images/logos/client-2.png", "alt": "Client 2" },
-    { "src": "/images/logos/client-3.png", "alt": "Client 3" },
-    { "src": "/images/logos/client-4.png", "alt": "Client 4" },
-    { "src": "/images/logos/client-5.png", "alt": "Client 5" }
+    {
+      "src": "/images/logos/client-1.png",
+      "alt": "Client 1"
+    },
+    {
+      "src": "/images/logos/client-2.png",
+      "alt": "Client 2"
+    },
+    {
+      "src": "/images/logos/client-3.png",
+      "alt": "Client 3"
+    },
+    {
+      "src": "/images/logos/client-4.png",
+      "alt": "Client 4"
+    },
+    {
+      "src": "/images/logos/client-5.png",
+      "alt": "Client 5"
+    }
   ]
 }

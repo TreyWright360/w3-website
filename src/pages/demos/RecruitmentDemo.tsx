@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { DemoPageTemplate } from '../../components/demos/DemoPageTemplate';
-import { FileText, UserPlus, Clock, Check, X, Shield, Sparkles } from 'lucide-react';
+import { FileText, UserPlus, Clock, Check, Sparkles } from 'lucide-react';
 
 export function RecruitmentDemo() {
-    const [file, setFile] = useState<File | null>(null);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [showResult, setShowResult] = useState(false);
 

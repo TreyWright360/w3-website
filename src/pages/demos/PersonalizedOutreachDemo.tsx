@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { DemoPageTemplate } from '../../components/demos/DemoPageTemplate';
-import { Mail, Search, Check, X, ShieldAlert, Sparkles, Send } from 'lucide-react';
+import { Search, Check, X, ShieldAlert, Sparkles } from 'lucide-react';
 
 export function PersonalizedOutreachDemo() {
     const [domain, setDomain] = useState('');

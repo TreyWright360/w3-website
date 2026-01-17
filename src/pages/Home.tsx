@@ -13,6 +13,7 @@ import { AvatarDemo } from '../components/sections/AvatarDemo';
 import { EcosystemExplainer } from '../components/sections/EcosystemExplainer';
 import { IndustryDemos } from '../components/sections/IndustryDemos';
 import { StickyCTA } from '../components/layout/StickyCTA';
+import { MeetMia } from '../components/sections/MeetMia';
 import { AnimatePresence, motion } from 'framer-motion';
 
 export function Home() {
@@ -21,6 +22,7 @@ export function Home() {
   return (
     <>
       <Hero onOpenDemo={() => setIsDemoOpen(true)} />
+      <MeetMia />
       {/* <VoiceDemo /> */}
       <EcosystemExplainer />
       <IndustryDemos />

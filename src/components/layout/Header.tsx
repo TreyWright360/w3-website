@@ -46,8 +46,6 @@ export const Header = () => {
   const menuItems = [
     { label: 'Services', href: '/#services' },
     { label: 'Pricing', href: '/#pricing' },
-    { label: 'Vibe Coding', href: '/services/production-vibe-coding' },
-    { label: 'Claude Skills', href: '/services/claude-skills' },
   ];
 
   return (
