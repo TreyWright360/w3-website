@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { X, DollarSign, Clock, Users, MessageSquare, TrendingDown } from 'lucide-react';
+import { DollarSign, Clock, Users, MessageSquare, TrendingDown } from 'lucide-react';
 
 export function ProblemAgitation() {
   const problems = [
@@ -81,7 +81,7 @@ export function ProblemAgitation() {
               >
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-red-50 flex items-center justify-center">
-                    <X className="w-6 h-6" style={{ color: problem.color }} />
+                    <Icon className="w-6 h-6" style={{ color: problem.color }} />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-bold text-[#213555] mb-1">

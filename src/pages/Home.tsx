@@ -1,21 +1,16 @@
 import { useState } from 'react';
 import { Hero } from '../components/sections/Hero';
-// import { VoiceDemo } from '../components/sections/VoiceDemo';
-import { ServicesGrid } from '../components/sections/ServicesGrid';
 import { PricingComparison } from '../components/sections/PricingComparison';
-import { LiveStatsDashboard } from '../components/sections/LiveStatsDashboard';
 import { SocialProof } from '../components/sections/SocialProof';
 import { FAQ } from '../components/sections/FAQ';
 import { Contact } from '../components/sections/Contact';
-import { RoiCalculator } from '../components/sections/RoiCalculator';
-import { SocialBotDemo } from '../components/sections/SocialBotDemo';
-import { AvatarDemo } from '../components/sections/AvatarDemo';
 import { EcosystemExplainer } from '../components/sections/EcosystemExplainer';
 import { IndustryDemos } from '../components/sections/IndustryDemos';
 import { StickyCTA } from '../components/layout/StickyCTA';
 import { MeetMia } from '../components/sections/MeetMia';
 import { ResearchForm } from '../components/forms/ResearchForm';
 import { AnimatePresence, motion } from 'framer-motion';
+
 
 export function Home() {
   const [isDemoOpen, setIsDemoOpen] = useState(false);
@@ -24,19 +19,10 @@ export function Home() {
     <>
       <Hero onOpenDemo={() => setIsDemoOpen(true)} />
       <MeetMia />
-      {/* <VoiceDemo /> */}
       <EcosystemExplainer />
       <IndustryDemos />
-      <RoiCalculator />
-      <AvatarDemo />
-      <SocialBotDemo />
-      <ServicesGrid />
-      <PricingComparison />
-      <LiveStatsDashboard />
-      <SocialProof />
-      <FAQ />
 
-      {/* Get Your Free Demo Package */}
+      {/* Get Your Free Demo Package - Moved up for better conversion */}
       <section id="get-demo" className="py-20 px-4 bg-gradient-to-b from-[--bg-primary] to-[--bg-secondary]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -72,6 +58,9 @@ export function Home() {
         </div>
       </section>
 
+      <PricingComparison />
+      <SocialProof />
+      <FAQ />
       <Contact />
 
       <StickyCTA onOpenDemo={() => setIsDemoOpen(true)} />
